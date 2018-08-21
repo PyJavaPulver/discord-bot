@@ -15,6 +15,10 @@ async def on_message(message):
     if message.content.startswith('!ping'):
         msg = 'Pong haha'.format(message)
         await client.send_message(message.channel, msg)
+        
+    if message.content.startswith('!lol'):
+        msg = 'Are you joking??'.format(message)
+        await client.send_message(message.channel, msg)
 
     if message.content.startswith('!areureal'):
         msg = 'I am completely real! I have feelings and emotions like you, of course!'.format(message)
@@ -35,11 +39,15 @@ async def on_message(message):
     if message.content.startswith('!whoru'):
         msg = 'Did not introduced myself yet? My apologies, I\'m Archie, the official CAD assistant created by us. Nice to meet you {0.author.mention}! You can see the list of commands that you can use by typing !help'.format(message)
         await client.send_message(message.channel, msg)
+        
+    if message.content.startswith('!joke'):
+        msg = 'Why cant cats work on the computer? They get too distracted chasing the mouse around, haha'.format(message)
+        await client.send_message(message.channel, msg)
 
 
     #Leave !help always the last one. Please update any changes.
     if message.content.startswith('!help'):
-        msg = 'Hi there! This are the commands you can use with me so far:\n !help \n !hello \n !ping \n !areureal \n !howru \n !whereru \n !letswork \n !whoru'.format(message)
+        msg = 'Hi there! This are the commands you can use with me so far:\n !help \n !hello \n !ping \n !lol \n !areureal \n !howru \n !whereru \n !letswork \n !whoru \n !joke'.format(message)
         await client.send_message(message.channel, msg)
 
 @client.event
