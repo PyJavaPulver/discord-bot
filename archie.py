@@ -17,7 +17,7 @@ async def on_ready():
 @bot.command(pass_context=True)
 async def ping(ctx):
     await bot.say(":ping_pong: ping!! xSSS")
-    print ("user has pinged")
+    print ("user has pinged succesfully")
 
 @bot.command(pass_context=True)
 async def info(ctx, user: discord.Member):
