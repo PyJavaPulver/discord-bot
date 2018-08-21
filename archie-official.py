@@ -15,6 +15,10 @@ async def on_message(message):
     if message.content.startswith('!ping'):
         msg = 'Pong haha'.format(message)
         await client.send_message(message.channel, msg)
+        
+    if message.content.startswith('!lol'):
+        msg = 'Are you joking??'.format(message)
+        await client.send_message(message.channel, msg)
 
     if message.content.startswith('!areureal'):
         msg = 'I am completely real! I have feelings and emotions like you, of course!'.format(message)
@@ -39,7 +43,7 @@ async def on_message(message):
 
     #Leave !help always the last one. Please update any changes.
     if message.content.startswith('!help'):
-        msg = 'Hi there! This are the commands you can use with me so far:\n !help \n !hello \n !ping \n !areureal \n !howru \n !whereru \n !letswork \n !whoru'.format(message)
+        msg = 'Hi there! This are the commands you can use with me so far:\n !help \n !hello \n !ping \n !lol \n !areureal \n !howru \n !whereru \n !letswork \n !whoru'.format(message)
         await client.send_message(message.channel, msg)
 
 @client.event
